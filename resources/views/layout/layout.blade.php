@@ -31,14 +31,9 @@
     <footer class="bg-dark text-light pt-5 pb-4">
         <div class="container text-center text-md-start">
             <div class="row">
-
                 <!-- About -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                     <h5 class="text-uppercase fw-bold mb-3">MyWebsite</h5>
-                    <p class="text-muted">
-                        A beautiful footer built with Bootstrap.
-                        Add your company info, mission, or tagline here.
-                    </p>
                 </div>
 
                 <!-- Links -->
@@ -46,9 +41,9 @@
                     <h6 class="text-uppercase fw-bold mb-3">Quick Links</h6>
                     <p><a href="#" class="text-reset text-decoration-none">Home</a></p>
                     <p><a href="/about" class="text-reset text-decoration-none">About</a></p>
-                    <p><a href="#" class="text-reset text-decoration-none">Projects</a></p>
-                    <p><a href="#" class="text-reset text-decoration-none">Contact</a></p>
-                    <p><a href="#" class="text-reset text-decoration-none">Blog</a></p>
+                    <p><a href="/projects" class="text-reset text-decoration-none">Projects</a></p>
+                    <p><a href="/contact" class="text-reset text-decoration-none">Contact</a></p>
+                    <p><a href="/blog" class="text-reset text-decoration-none">Blog</a></p>
                 </div>
 
                 <!-- Contact -->
@@ -74,7 +69,6 @@
 
             </div>
         </div>
-
         <!-- Copyright -->
         <div class="text-center mt-3">
             <p class="mb-0">&copy; 2025 MyWebsite. All Rights Reserved.</p>
