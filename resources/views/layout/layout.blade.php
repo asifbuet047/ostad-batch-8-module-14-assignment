@@ -13,21 +13,50 @@
 </head>
 
 <body>
+
+    <!--Navigation bar responsive-->
+    <nav class="navbar navbar-expand-lg p-2 rounded"
+        style="background: linear-gradient(90deg, #ff7e5f, #feb47b);>
+        <a class="navbar-brand" href="/">
+        Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Header responsive-->
     <header class="container py-5">
         <div class="row align-items-center bg-light p-5 rounded shadow-lg">
             <div class="col-md-6">
                 <h2 class="fw-bold mb-3">Welcome to My Website</h2>
-                <p class="text-muted mb-4">
-                    This is a clean and elegant section built with Bootstrap classes.
-                    You can use it to highlight features, introduce yourself, or showcase content.
-                </p>
                 <a href="#" class="btn btn-primary btn-lg">Get Started</a>
             </div>
         </div>
     </header>
 
+    <!--Content section varies on child responsive-->
     <section>@yield('content')</section>
 
+    <!--Footer responsive-->
     <footer class="bg-dark text-light pt-5 pb-4">
         <div class="container text-center text-md-start">
             <div class="row">
@@ -75,7 +104,15 @@
         </div>
     </footer>
 
-
+    <script>
+        const currentPage = location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach(link => {
+            if (link.getAttribute("href") === `/${currentPage}`) {
+                link.classList.add("active");
+            }
+        });
+    </script>
 </body>
 
 </html>
