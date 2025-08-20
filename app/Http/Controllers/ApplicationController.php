@@ -10,7 +10,7 @@ class ApplicationController extends Controller
 {
     public function showHomePage(Request $request)
     {
-        return view('home');
+        return view('home', ['name' => 'MD ASIFUZZAMAN ASIF']);
     }
 
     public function showAboutPage(Request $request)

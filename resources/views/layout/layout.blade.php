@@ -72,14 +72,26 @@
         </div>
     </nav>
     <!--Header responsive-->
-    <header class="container py-5"">
-        <div class="row align-items-center bg-light p-5 rounded shadow-lg" style="@yield('custom_color')>
-            <div class="col-md-6">
-                <h2 class="fw-bold mb-3 @yield('blog_color')">Welcome to My Website</h2>
-                <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+    <header class="container py-5">
+        <div class="row align-items-center bg-light p-5 rounded shadow-lg text-center text-md-start"
+            style="@yield('custom_color')">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <h1 class="display-4 fw-bold mb-3 @yield('blog_color')">Welcome to My Portfolio</h1>
+                <p class="lead mb-4 @yield('blog_color')">
+                    I am a passionate web developer creating modern, responsive, and user-friendly applications.
+                    Explore my work and skills below.
+                </p>
+                <a href="/about" class="btn btn-primary btn-lg me-2">Get Started</a>
+                <a href="/contact" class="btn btn-outline-primary btn-lg">Contact Me</a>
             </div>
+
+            <div class="col-md-6">
+
+            </div>
+
         </div>
     </header>
+
 
     <!--Content section varies on child responsive-->
     <section>@yield('content')</section>
@@ -128,7 +140,7 @@
         </div>
         <!-- Copyright -->
         <div class="text-center mt-3">
-            <p class="mb-0">&copy; 2025 MyWebsite. All Rights Reserved.</p>
+            <p class="mb-0">&copy; 2025 MD ASIFUZZAMAN ASIF. All Rights Reserved.</p>
         </div>
     </footer>
 
