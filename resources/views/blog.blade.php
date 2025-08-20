@@ -11,7 +11,7 @@
         <div class="p-5 rounded-4 shadow text-white" style="background: linear-gradient(135deg, #172A3A, #004346);">
 
             @foreach ($blogs as $blog)
-                <div class="border border-primary rounded mb-2">
+                <div class="border border-4 border-primary rounded mb-2">
                     <h2 class="fw-bold p-2">{{ $blog->name }}</h2>
                     <p class="p-1">{{ $blog->content }}</p>
                 </div>

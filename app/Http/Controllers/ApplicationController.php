@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
@@ -19,7 +20,13 @@ class ApplicationController extends Controller
 
     public function showProjectPage(Request $request)
     {
-        return view('projects');
+        if (Project::all()->count() > 0) {
+            $projects = Project::all();
+            return view('projects', compact('projects'));
+        } else {
+            $projects = Project::factory()->count(7)->create();
+            return view('projects', compact('projects'));
+        }
     }
 
     public function showBlogPage(Request $request)
