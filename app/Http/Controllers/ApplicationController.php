@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
@@ -23,7 +24,13 @@ class ApplicationController extends Controller
 
     public function showBlogPage(Request $request)
     {
-        return view('blog');
+        if (Blog::all()->count() > 0) {
+            $blogs = Blog::all();
+            return view('blog', compact('blogs'));
+        } else {
+            $blogs = Blog::factory()->count(6)->create();
+            return view('blog', compact('blogs'));
+        }
     }
 
     public function showContactPage(Request $request)
