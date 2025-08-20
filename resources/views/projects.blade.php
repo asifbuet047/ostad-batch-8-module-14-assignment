@@ -2,6 +2,8 @@
 
 @section('page_title', 'Projects')
 
+@section('custom_color', 'background: linear-gradient(135deg, #726DA8, #7D8CC4);')
+
 @section('content')
     <div class="container my-5">
         <div class="p-5 rounded-4 shadow text-black" style="background: linear-gradient(135deg, #726DA8, #7D8CC4);">

@@ -13,3 +13,5 @@
         </div>
     </div>
 @endsection
+
+@section('custom_color', 'background: linear-gradient(135deg, #CCD7C5, #EFD2CB);')

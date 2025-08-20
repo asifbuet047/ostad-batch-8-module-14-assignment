@@ -9,6 +9,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .contact-card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-control:focus {
+            border-color: #6c63ff;
+            box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+        }
+
+        .btn-custom {
+            background: #6c63ff;
+            color: white;
+            border-radius: 10px;
+            transition: 0.3s;
+            align-content: center;
+            align-items: center;
+        }
+
+        .btn-custom:hover {
+            background: #574bdb;
+        }
+    </style>
 
 </head>
 
@@ -18,7 +46,7 @@
     <nav class="navbar navbar-expand-lg p-2 rounded"
         style="background: linear-gradient(90deg, #ff7e5f, #feb47b);>
         <a class="navbar-brand" href="/">
-        Navbar</a>
+        <i class="bi bi-airplane-engines-fill"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44,10 +72,10 @@
         </div>
     </nav>
     <!--Header responsive-->
-    <header class="container py-5">
-        <div class="row align-items-center bg-light p-5 rounded shadow-lg">
+    <header class="container py-5"">
+        <div class="row align-items-center bg-light p-5 rounded shadow-lg" style="@yield('custom_color')>
             <div class="col-md-6">
-                <h2 class="fw-bold mb-3">Welcome to My Website</h2>
+                <h2 class="fw-bold mb-3 @yield('blog_color')">Welcome to My Website</h2>
                 <a href="#" class="btn btn-primary btn-lg">Get Started</a>
             </div>
         </div>
@@ -113,6 +141,7 @@
             }
         });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
